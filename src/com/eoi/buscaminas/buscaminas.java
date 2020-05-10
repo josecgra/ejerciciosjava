@@ -10,7 +10,7 @@ import java.util.*;
 // Para este ejercicio usaremos GIT y jugaremos con el repositorio
 // https://github.com/josecgra/ejerciciosjava.git
 // Cada equipo clonara el repositorio con el ejercicio e implementara una funcion
-// cuando la termine y la pruebe la subira al repositorio avisando a los demas
+// cuando la termine y la pruebe, la sube al repositorio avisando a los demas
 // que ya lo ha hecho para que se descarguen los nuevos cambios.
 // ################################################################################
 
