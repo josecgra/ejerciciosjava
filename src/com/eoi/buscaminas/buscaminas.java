@@ -32,7 +32,7 @@ public class buscaminas {
 	}
 
 	// ################################################################################
-	// Funcion IncializarTablero: Funcion que recibe las dos talbas: tablero, visible
+	// Funcion IncializarTablero: Funcion que recibe las dos tablas: tablero, visible
 	// Incializa tablero con valores 0
 	// Incializa visible con valores Falso, indicando que estan ocultas
 	// ################################################################################
