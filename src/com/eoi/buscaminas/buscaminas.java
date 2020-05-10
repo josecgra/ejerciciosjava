@@ -7,7 +7,11 @@ import java.util.*;
 // Implementar en JAVA el juego del BUSCAMINAS que vimos en PSEINT
 // Por equipos repartiros las funciones e implementarlas. La función main está hecha
 // y no se toca.
-// Para este ejercicio usaremos GIT, descargaros del repositorio 
+// Para este ejercicio usaremos GIT y jugaremos con el repositorio
+// https://github.com/josecgra/ejerciciosjava.git
+// Cada equipo clonara el repositorio con el ejercicio e implementará una función
+// cuando la termine y la pruebe la subirá al repositorio avisando a los demás
+// de que ya lo ha hecho para que se descarguen los nuevos cambios.
 // ################################################################################
 
 public class buscaminas {
@@ -15,7 +19,7 @@ public class buscaminas {
 	// Función max: Función auxiliar que calcula el máximo de dos números
 	// ################################################################################
 	public static int max(int num1, int num2) {
-		//por realizar
+		System.out.print("implementa el máximo de dos números");
 		return 0;
 	}
 
@@ -23,77 +27,85 @@ public class buscaminas {
 	// Función min: Función auxiliar que calcula el mínimo de dos números
 	// ################################################################################
 	public static int min(int num1, int num2) {
-		//por realizar
+		System.out.print("implementa el mínimo de dos números");
 		return 0;
 	}
 
 	// ################################################################################
-	// Función IncializarTablero: Función que recibe las dos talbas: tablero, visible
+	// Función IncializarTablero: Función que recibe las dos tablas: tablero y visible
 	// Incializa tablero con valores 0
 	// Incializa visible con valores Falso, indicando que están ocultas
 	// ################################################################################
 	public static void inicializartablero(int tablero[][], boolean visible[][]) {
-		//por realizar
+		System.out.print("inicializa las tablas 'tablero' y 'visible'");
 	}
 
 	// ################################################################################
-	// Función PonerMinas: Función que recibe el tablero (tabla 10x10) por referencia
+	// Función PonerMinas: Función que recibe el tablero (tabla 10x10)
 	// Genera 10 posiciones de la tabla e incializa esas posiciones con minas (valor 9)
 	// Debe asegurar que se ponen 10 minas.
 	// Cada vez que se pone una mina se incrementa en 1 el valor de las celdas vecinas,
 	// si no son una mina
 	// ################################################################################
 	public static void ponerminas(int tablero[][]) {
-		//por realizar
+		System.out.print("reparte 10 minas en tu tablero asumiendo que la mina sera el 9");
+		System.out.print("cuando pongas una mina, incrementa el número de las casillas vecinas");
+		System.out.print("usa las funciones max y min que te proveeran tus compañeros");
 	}
 
 	// ################################################################################
-	// Función DestaparCelda: Funcion que recibe por referencia las dos tablas y la
+	// Función DestaparCelda: Funcion que recibe las dos tablas y la
 	// fila y columna que se debe destapar.
 	// Si es una casilla que se puede destapar (la posición de la tabla visible es Falso)
-	// Se destapa (posición de la tabla visible a Verdadero)
-	// Si no hay minas cerca tengo que intentar destapar las vecinas
-	// Si la celda vecina no es una mina, la destapo
-	// Función recursiva
+	// 	Se destapa (posición de la tabla visible cambia a Verdadero)
+	// 	Si no hay minas cerca tengo que intentar destapar las vecinas
+	// 		Si la celda vecina no es una mina, la destapo (llamo recursivamente)
+	//
+	// Función recursiva!
 	// ################################################################################
 	public static void destaparcelda(int tablero[][], boolean visible[][], int fila, int colum) {
-		//por realizar
+		System.out.print("esta función destapará una celda del tablero y sus vecinas");
+		System.out.print("usa las funciones max y min que te proveeran tus compañeros");
+		System.out.print("al destapar las vecinas usa recursividad");
 	}
 
 	// ################################################################################
 	// Función ContarCeldasDestapadas: Funcion que recibe la tabla visible
-	// Recorre la tabla y cuenta los valores Verdaderos, este valor se devuelve
-	// Si el contador es 90 significa que hemos destapado todas las casillas: hemos ganado
+	// Recorre la tabla y cuenta los valores Verdaderos, será el valor devuelto por la funcion.
 	// ################################################################################
 	public static int contarceldasdestapadas(boolean visible[][]) {
-		//por realizar
+		System.out.print("funcion que cuenta el numero de celdas destapadas");
 		return 0;
 	}
 
 	// ################################################################################
-	// Función ComprobarTablero: Funcion que recibe por referencia las dos tablas y la
+	// Función ComprobarTablero: Funcion que recibe las dos tablas, la
 	// fila y columna que se debe destapar.
-	// Si la posición a destapar es una mina (=9) devuelve -1 (hemos perdido)
+	// Si la posición a destapar es una mina (=9) la función devuelve -1
 	// SiNo destapo la casilla correspondiente y cuento las casillas detapadas y se devuelve
 	// ################################################################################
 	public static int comprobartablero(int tablero[][], boolean visible[][], int fila, int colum) {
-		//por realizar
+		System.out.print("si la celda a destapar es una mina:");
+		System.out.print("  cambio a true el valor de esa posicion en visible y devuelvo -1");
+		System.out.print("caso contrario, si la celda a destapar NO es una mina:");
+		System.out.print("  llamaré a la funcion destaparcelda y devolveré el numero de celdas destapadas con la funcion contarceldasdestapadas");
 		return 0;
 	}
 
 	// ################################################################################
-	// Función EscribirTablero: Funcion que las dos tablas 
-	// Recorre las tablas y las muestras en pantalla
+	// Función EscribirTablero: Funcion que recibe las dos tablas tablero y visible
+	// Recorre las tablas y las muestra en pantalla
 	// Dependiendo del valor de cada posición de la tabla visible, muestra la posición
 	// de la tabla resultado.
 	// Si la posición está destapada (verdadero):
-	// Si no tiene minas alrededor (valor 0) muestra un hueco
-	// Si es una mina, muestro un *
-	// SiNo muetro el valor de la casilla (indica cuantas minas tiene alrededor)
+	// 		Si no tiene minas alrededor (valor 0) muestra un hueco
+	// 		Si es una mina, muestro un *
+	// 		SiNo muetro el valor de la casilla (indica cuantas minas tiene alrededor)
 	// SiNo la posición no es visible y muestro un #
 	// ################################################################################
 	public static void escribirtablero(int tablero[][], boolean visible[][]) {
-		//por realizar
+		System.out.print("función que con las dos tablas de entrada va mostrando el tablero");
+		System.out.print("además del tablero que muestre tambien los índices de cada fila/columna");
 	}
 
 	// ################################################################################
