@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 // ################################################################################
-// Implementar en JAVA el juego del BUSCAMINAS que vimos en PSEINT
+// Implementar en JAVA el juego del BuscaMinas que vimos en PSEINT
 // Por equipos repartiros las funciones e implementarlas. La función main está hecha
 // y no se toca.
 // Para este ejercicio usaremos GIT y jugaremos con el repositorio
