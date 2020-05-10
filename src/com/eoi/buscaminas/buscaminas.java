@@ -5,14 +5,14 @@ import java.util.*;
 
 // ################################################################################
 // Implementar en JAVA el juego del BUSCAMINAS que vimos en PSEINT
-// Por equipos repartiros las funciones e implementarlas. La funciÛn main est· hecha
+// Por equipos repartiros las funciones e implementarlas. La funci√≥n main est√° hecha
 // y no se toca.
 // Para este ejercicio usaremos GIT, descargaros del repositorio 
-// ################################################################################
+// #################################################################################
 
 public class buscaminas {
 	// ################################################################################
-	// FunciÛn max: FunciÛn auxiliar que calcula el m·ximo de dos n˙meros
+	// Funci√≥n max: Funci√≥n auxiliar que calcula el m√°ximo de dos n√∫meros
 	// ################################################################################
 	public static int max(int num1, int num2) {
 		//por realizar
@@ -20,7 +20,7 @@ public class buscaminas {
 	}
 
 	// ################################################################################
-	// FunciÛn min: FunciÛn auxiliar que calcula el mÌnimo de dos n˙meros
+	// Funci√≥n min: Funci√≥n auxiliar que calcula el m√≠nimo de dos n√∫meros
 	// ################################################################################
 	public static int min(int num1, int num2) {
 		//por realizar
@@ -28,16 +28,16 @@ public class buscaminas {
 	}
 
 	// ################################################################################
-	// FunciÛn IncializarTablero: FunciÛn que recibe las dos talbas: tablero, visible
+	// Funci√≥n IncializarTablero: Funci√≥n que recibe las dos talbas: tablero, visible
 	// Incializa tablero con valores 0
-	// Incializa visible con valores Falso, indicando que est·n ocultas
+	// Incializa visible con valores Falso, indicando que est√°n ocultas
 	// ################################################################################
 	public static void inicializartablero(int tablero[][], boolean visible[][]) {
 		//por realizar
 	}
 
 	// ################################################################################
-	// FunciÛn PonerMinas: FunciÛn que recibe el tablero (tabla 10x10) por referencia
+	// Funci√≥n PonerMinas: Funci√≥n que recibe el tablero (tabla 10x10) por referencia
 	// Genera 10 posiciones de la tabla e incializa esas posiciones con minas (valor 9)
 	// Debe asegurar que se ponen 10 minas.
 	// Cada vez que se pone una mina se incrementa en 1 el valor de las celdas vecinas,
@@ -48,20 +48,20 @@ public class buscaminas {
 	}
 
 	// ################################################################################
-	// FunciÛn DestaparCelda: Funcion que recibe por referencia las dos tablas y la
+	// Funci√≥n DestaparCelda: Funcion que recibe por referencia las dos tablas y la
 	// fila y columna que se debe destapar.
-	// Si es una casilla que se puede destapar (la posiciÛn de la tabla visible es Falso)
-	// Se destapa (posiciÛn de la tabla visible a Verdadero)
+	// Si es una casilla que se puede destapar (la posici√≥n de la tabla visible es Falso)
+	// Se destapa (posici√≥n de la tabla visible a Verdadero)
 	// Si no hay minas cerca tengo que intentar destapar las vecinas
 	// Si la celda vecina no es una mina, la destapo
-	// FunciÛn recursiva
+	// Funci√≥n recursiva
 	// ################################################################################
 	public static void destaparcelda(int tablero[][], boolean visible[][], int fila, int colum) {
 		//por realizar
 	}
 
 	// ################################################################################
-	// FunciÛn ContarCeldasDestapadas: Funcion que recibe la tabla visible
+	// Funci√≥n ContarCeldasDestapadas: Funcion que recibe la tabla visible
 	// Recorre la tabla y cuenta los valores Verdaderos, este valor se devuelve
 	// Si el contador es 90 significa que hemos destapado todas las casillas: hemos ganado
 	// ################################################################################
@@ -71,9 +71,9 @@ public class buscaminas {
 	}
 
 	// ################################################################################
-	// FunciÛn ComprobarTablero: Funcion que recibe por referencia las dos tablas y la
+	// Funci√≥n ComprobarTablero: Funcion que recibe por referencia las dos tablas y la
 	// fila y columna que se debe destapar.
-	// Si la posiciÛn a destapar es una mina (=9) devuelve -1 (hemos perdido)
+	// Si la posici√≥n a destapar es una mina (=9) devuelve -1 (hemos perdido)
 	// SiNo destapo la casilla correspondiente y cuento las casillas detapadas y se devuelve
 	// ################################################################################
 	public static int comprobartablero(int tablero[][], boolean visible[][], int fila, int colum) {
@@ -82,15 +82,15 @@ public class buscaminas {
 	}
 
 	// ################################################################################
-	// FunciÛn EscribirTablero: Funcion que las dos tablas 
+	// Funci√≥n EscribirTablero: Funcion que las dos tablas 
 	// Recorre las tablas y las muestras en pantalla
-	// Dependiendo del valor de cada posiciÛn de la tabla visible, muestra la posiciÛn
+	// Dependiendo del valor de cada posici√≥n de la tabla visible, muestra la posici√≥n
 	// de la tabla resultado.
-	// Si la posiciÛn est· destapada (verdadero):
+	// Si la posici√≥n est√° destapada (verdadero):
 	// Si no tiene minas alrededor (valor 0) muestra un hueco
 	// Si es una mina, muestro un *
 	// SiNo muetro el valor de la casilla (indica cuantas minas tiene alrededor)
-	// SiNo la posiciÛn no es visible y muestro un #
+	// SiNo la posici√≥n no es visible y muestro un #
 	// ################################################################################
 	public static void escribirtablero(int tablero[][], boolean visible[][]) {
 		//por realizar
@@ -103,7 +103,7 @@ public class buscaminas {
 	// Mostrar el tablero
 	// Pedir fila y columna de casilla a destapar
 	// Comprobar tablero
-	// Hasta que la comprobaciÛn = -1 (has perdido hay una mina)
+	// Hasta que la comprobaci√≥n = -1 (has perdido hay una mina)
 	// O hasta que haya destapada todas las casillas (Has ganado)
 	// ################################################################################
 	public static void main(String args[]) throws IOException {
