@@ -24,7 +24,7 @@ public class buscaminas {
 	}
 
 	// ################################################################################
-	// Funcion min: Funcion auxiliar que calcula el minimo de dos numeros
+	// Funcion min: Funcion auxiliar que calcula el minimo de dos numeross
 	// ################################################################################
 	public static int min(int num1, int num2) {
 		System.out.print("implementa el minimo de dos numeros");
