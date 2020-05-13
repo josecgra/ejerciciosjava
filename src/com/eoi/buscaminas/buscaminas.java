@@ -63,9 +63,23 @@ public class buscaminas {
 	// Funcion recursiva
 	// ################################################################################
 	public static void destaparcelda(int tablero[][], boolean visible[][], int fila, int colum) {
+		int fila2, colum2;
 		System.out.print("esta funcion destapara una celda del tablero y sus vecinas");
 		System.out.print("usa las funciones max y min que te proveeran tus companeros");
 		System.out.print("al destapar las vecinas usa recursividad");
+		if (visible[fila][colum] = false) {
+			visible[fila][colum] = true;
+			if (tablero[fila][colum] == 0) {
+				for (fila2 = max(0,fila-1); fila2 <= min(9,fila+1); fila2++) {
+					for (colum2 = max(0,colum-1); colum2 <=min(9,colum+1); colum2++) {
+						if (tablero[fila2][colum2] !=9 ) {
+							destaparcelda(tablero,visible,fila2,colum2);
+						}
+					}
+				}
+			}
+		}
+		
 	}
 
 	// ################################################################################
@@ -75,7 +89,16 @@ public class buscaminas {
 	// ################################################################################
 	public static int contarceldasdestapadas(boolean visible[][]) {
 		System.out.print("funcion que cuenta el numero de celdas destapadas");
-		return 0;
+		int contador, fila, colum;
+		contador = 0;
+		for (fila = 0; fila <= 9; fila++) {
+			for (colum = 0; colum <= 9; colum++) {
+				if (visible[fila][colum]) {
+					contador = contador + 1;
+				}
+			}
+		}
+		return contador;
 	}
 
 	// ################################################################################
@@ -89,7 +112,15 @@ public class buscaminas {
 		System.out.print("  cambio a true el valor de esa posicion en visible y devuelvo -1");
 		System.out.print("caso contrario, si la celda a destapar NO es una mina:");
 		System.out.print("  llamara a la funcion destaparcelda y devolvera el numero de celdas destapadas con la funcion contarceldasdestapadas");
-		return 0;
+		int resultado;
+			if (tablero[fila][colum] == 9) {
+				visible[fila][colum] = true;
+				resultado = -1;
+			}else {
+				destaparcelda(tablero,visible,fila,colum);
+				resultado = contarceldasdestapadas(visible);
+			}
+		return resultado;
 	}
 
 	// ################################################################################
